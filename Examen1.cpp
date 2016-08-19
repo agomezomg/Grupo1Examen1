@@ -1,9 +1,29 @@
+#include "Pokemon.h"
 #include <iostream>
 #include <vector>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> b0bceb96c4029b8b556caa6ccc2024ce0fb28828
 using namespace std;
 #include <string>
 string TiposPokemon();
 string Naturaleza();
+<<<<<<< HEAD
+>>>>>>> origin/Didier
+
+int main(int argc, char const *argv[])
+{
+	vector<string> Lista;
+	Lista.push_back(TiposPokemon());
+	Lista.push_back(Naturaleza());
+	for (int i = 0; i < 2; ++i)
+	{
+		cout<<Lista.at(i);
+	}
+=======
 
 int main(int argc, char const *argv[])
 {
@@ -48,6 +68,7 @@ int main(int argc, char const *argv[])
 		
 		}while(opcion != 4);
 
+>>>>>>> b0bceb96c4029b8b556caa6ccc2024ce0fb28828
 
 }
 
@@ -192,4 +213,56 @@ string Naturaleza(){
 	}
 	return Naturaleza;
 }
+<<<<<<< HEAD
+=======
+using namespace std;
 
+int main(int argc, char const *argv[])
+{
+	int opcion;
+	string nombre;
+	std::vector<string> v;
+	do{
+		cout<<"Bienvenido a Pokemon Go ¿Qué deseas hacer?"<<endl;
+		cout<<"1. Ingresar un nuevo Pokemon"<<endl;
+		cout<<"2. Entrenar un Pokemon"<<endl;
+		cout<<"3. Liberar un Pokemon"<<endl;
+		cout<<"4. Salir"<<endl;
+		cout<<"5. Listar"<<endl;
+		cin>>opcion;
+
+		switch (opcion){
+			case 1:
+				cout<<"Ingresa el nombre del Pokemon nuevo: ";
+				cin>>nombre;
+				v.push_back(nombre);
+				cout<<endl;
+			break;
+
+			case 2:
+				cout<<"----------Entrenar---------";
+				cout<<"1. Modificar nombre"<<endl;
+				cout<<"2. Modificar Nivel"<<endl;
+				cout<<"3. Regresar"<<endl;
+				cin>>opcion;
+
+			break;
+
+			case 3:
+
+			break;
+			case 5:
+				for(int i = 0; i < 5; i++){
+					cout<<v[i]<<endl;
+				}
+			break;
+		}
+		
+		}while(opcion != 4);
+
+
+}
+>>>>>>> ec9fe126d335037785e8e2679993c0d02be13b0e
+=======
+
+>>>>>>> b0bceb96c4029b8b556caa6ccc2024ce0fb28828
