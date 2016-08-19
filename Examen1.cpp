@@ -109,22 +109,45 @@ int main(int argc, char const *argv[]) {
 			cout << "1. Ordenar por nombre \n 2. Ordenar por nivel \n";
 
 			if (pick == 1) {
-				//
-			} else if (pick == 2) {
-				int first;
-				int second;
-				Pokemon one;
-				Pokemon two;
+				string first;
+				string second;
+				Pokemon* one = new Pokemon();
+				Pokemon* two = new Pokemon();
+
 				for (int i = 0; i < Lista.size(); ++i)
 				{
 					if (i + 1 < Lista.size())
 					{
-						first = Lista.at(i) -> getNivel();
-						second = Lista.at(i + 1) -> getNivel();
+						one = Lista.at(i);
+						two = Lista.at(i + 2);
+						first = one -> getNombre();
+						second = two -> getNombre();
+
+						if (first[0] > second[0])
+						{
+							Lista.at(i) = two;
+							Lista.at(i + 1) = one;
+						}
+					}
+				}
+			} else if (pick == 2) {
+				int first;
+				int second;
+				Pokemon* one = new Pokemon();
+				Pokemon* two = new Pokemon();
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if (i + 1 < Lista.size())
+					{
+						one = Lista.at(i);
+						two = Lista.at(i + 2);
+						first = one -> getNivel();
+						second = two -> getNivel();
 
 						if (first > second)
 						{
-							//Lista.at(i) = 
+							Lista.at(i) = two;
+							Lista.at(i + 1) = one;
 						}
 					}
 				}
