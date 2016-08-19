@@ -5,7 +5,7 @@ using namespace std;
 #include <string>
 
 string TiposPokemon();
-string Naturaleza();
+string ElegirNaturaleza();
 
 /*int main(int argc, char const *argv[])
 {
@@ -22,52 +22,87 @@ string Naturaleza();
 int main(int argc, char const *argv[])
 {
 	int opcion;
-	string nombre;
-	std::vector<string> v;
+
+	vector<Pokemon*> Lista;
+	
+
 	do{
 		cout<<"Bienvenido a Pokemon Go ¿Qué deseas hacer?"<<endl;
 		cout<<"1. Ingresar un nuevo Pokemon"<<endl;
 		cout<<"2. Entrenar un Pokemon"<<endl;
 		cout<<"3. Liberar un Pokemon"<<endl;
-		cout<<"4. Salir"<<endl;
-		cout<<"5. Listar"<<endl;
+		cout<<"4. Buscar"<<endl;
+		cout<<"5. Salir"<<endl;
 		cin>>opcion;
 
-		switch (opcion){
-			case 1:
-				cout<<"Ingresa el nombre del Pokemon nuevo: ";
-				cin>>nombre;
-				v.push_back(nombre);
-				cout<<endl;
-			break;
+		if (opcion == 1) {
+				string Pnombre;
+				int Pnivel;
+				string Pnaturaleza;
+				string Ptipo1;
+				string Ptipo2;
+				int Php;
+				float Pataque;
+				float Pdefensa;
+				float PataqueEspecial;
+				float PdefensaEspecial;
+				float Prapidez;
+				bool Plegendario = false;
 
-			case 2:
+				cout << "Ingresa el nombre del Pokemon nuevo: ";
+				cin >> Pnombre;
+				cout<< "Ingresa el nivel: ";
+				cin >> Pnivel;
+				cout << "Ingresa la naturaleza: ";
+				Pnaturaleza = ElegirNaturaleza();
+				cout << "Ingresa el tipo 1: ";
+				Ptipo1 = TiposPokemon();
+				cout << "Ingresa el tipo 2: ";
+				Ptipo2 = TiposPokemon();
+				cout << "Ingresa  el HP: ";
+				cin >> Php;
+				cout << "Ingresa el ataque: ";
+				cin >> Pataque;
+				cout << "Ingresa la defensa: ";
+				cin >> Pdefensa;
+				cout << "Ingresa el ataque Especial: ";
+				cin >> PataqueEspecial;
+				cout << "Ingresa la defensa Especial: ";
+				cin >> PdefensaEspecial;
+				cout << "Ingresa la rapidez: ";
+				cin >> Prapidez;
+				cout << "Es legendario? [s/n] \n";
+				char confirm;
+				cin >> confirm;
+
+				if (confirm == 's' || confirm == 'S')
+				{
+					Plegendario = true;
+				}
+
+				//Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, PataqueEspecial, Prapidez, Plegendario));
+			} else if (opcion == 2) {
 				cout<<"----------Entrenar---------";
 				cout<<"1. Modificar nombre"<<endl;
 				cout<<"2. Modificar Nivel"<<endl;
 				cout<<"3. Regresar"<<endl;
 				cin>>opcion;
-
-			break;
-
-			case 3:
-
-			break;
-			case 5:
-				for(int i = 0; i < 5; i++){
-					cout<<v[i]<<endl;
-				}
-			break;
-		}
+			} else if (opcion == 3)
+			{
+				/* code */
+			} else if (opcion == 4)
+			{
+				/* code */
+			}
 		
-	}while(opcion != 4);
+		} while(opcion != 5);
 }
 
 string TiposPokemon(){
 	int Opcion=1;
 	string Tipo="";
 	cout<<"Bug:1\nDragon:2\nIce:3\nFitgthing:4\nFire:5\nFlying:6\nGrass:7\nGhost:8\nGround:9\nElectric:10\nNormal:11\nPoison:12\nPhyshic:13\nRock:14\nWater:15\nDark:16\nSteel:17\nFairy:18\nIngrese su opcion:";
-	cin>>Tipo;
+	cin>>Opcion;
 	if(Opcion==1){
 		Tipo="Bug";
 	}
@@ -125,11 +160,11 @@ string TiposPokemon(){
 	return Tipo;
 }
 
-string Naturaleza(){
-	int Opcion=1;
-	string Naturaleza="";
+string ElegirNaturaleza(){
+	int Opcion;
+	string Naturaleza;
 	cout<<"Hardy:1\nLonely:2\nBrave:3\nAdamant:4\nNaughty:5\nBold:6\nDocile:7\nRelaxed:8\nImpish:9\nLax:10\nHasty:11\nSerious:12\nJolly:13\nNaive:14\nModest:15\nMild:16\nQuiet:17\nBashful:18\nRash:19\nCalm:20\nGentle:21\nSassy:22\nCareful:23\nQuirky:24\nIngrese su opcion:";
-	cin>>Naturaleza;
+	cin >> Opcion;
 	if(Opcion==1){
 		Naturaleza="Hardy";
 	}
