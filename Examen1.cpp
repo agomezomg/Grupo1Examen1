@@ -17,7 +17,6 @@ string ElegirNaturaleza();
 	{
 		cout<<Lista.at(i);
 	}
-
 }*/
 
 int main(int argc, char const *argv[]) {
@@ -164,13 +163,12 @@ int main(int argc, char const *argv[]) {
 		} 
 		else if (opcion == 4) {
 				/* code */
-<<<<<<< HEAD
 
 		} 
 		else if (opcion == 5)	{
-=======
+
 		} else if (opcion == 5)	{
->>>>>>> a31d8e16a724f98b3c176bbf94153606c9735e07
+
 			string name1;
 			string name2;
 			int pick;
@@ -220,12 +218,11 @@ int main(int argc, char const *argv[]) {
 						}
 					}
 				}
-<<<<<<< HEAD
+
 			} else {
 				cout << "Opcion no valida. \n";
 			}
-=======
->>>>>>> a31d8e16a724f98b3c176bbf94153606c9735e07
+
 
 				for (int i = 0; i < Lista.size(); ++i)
 				{
@@ -234,8 +231,13 @@ int main(int argc, char const *argv[]) {
 			} else {
 				cout << "Opcion no valida. \n";
 			}
-		}
+		
 	} while(opcion != 6);
+	for (int i = 0; i< Lista.size();i++)
+   	{
+    	delete (Lista[i]);
+  	} 
+   Lista.clear();
 }
 
 string TiposPokemon(){
