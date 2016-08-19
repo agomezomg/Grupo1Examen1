@@ -31,7 +31,8 @@ int main(int argc, char const *argv[]) {
 		cout<<"2. Entrenar un Pokemon"<<endl;
 		cout<<"3. Liberar un Pokemon"<<endl;
 		cout<<"4. Buscar"<<endl;
-		cout<<"5. Salir"<<endl;
+		cout<<"5. Sort"<<endl;
+		cout<<"6. Salir"<<endl;
 		cin>>opcion;
 
 		if (opcion == 1) {
@@ -74,7 +75,22 @@ int main(int argc, char const *argv[]) {
 				char confirm;
 				cin >> confirm;
 
-				Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
+				if (confirm == 's' || confirm == 'S')
+				{
+					Plegendario = true;
+				}
+
+				float check;
+
+				check = Php + Pataque + Pdefensa + PataqueEspecial + PdefensaEspecial + Prapidez;
+				if (check > 780)
+				{
+					cout << "No se creo el nuevo Pokemon \n";
+				} else {
+					Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
+					cout << "Se creo un nuevo Pokemon \n";
+				}
+				
 		}else if (opcion == 2) {
 				cout<<"----------Entrenar---------";
 				cout<<"1. Modificar nombre"<<endl;
@@ -85,9 +101,11 @@ int main(int argc, char const *argv[]) {
 				/* code */
 		} else if (opcion == 4) {
 				/* code */
+		} else if (opcion == 5)	{
+			/* code */
 		}
 		
-	} while(opcion != 5);
+	} while(opcion != 6);
 }
 
 string TiposPokemon(){

@@ -37,6 +37,8 @@ class Pokemon {
 		void setAtaque(float);
 		float getDefensa();
 		void setDefensa(float);
+		float getAtaqueEspecial();
+		void setAtaqueEspecial(float);
 		float getDefensaEspecial();
 		void setDefensaEspecial(float);
 		float getRapidez();
