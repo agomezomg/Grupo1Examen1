@@ -19,8 +19,7 @@ string ElegirNaturaleza();
 
 }*/
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
 	int opcion;
 
 	vector<Pokemon*> Lista;
@@ -75,27 +74,20 @@ int main(int argc, char const *argv[])
 				char confirm;
 				cin >> confirm;
 
-				if (confirm == 's' || confirm == 'S')
-				{
-					Plegendario = true;
-				}
-
-				//Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, PataqueEspecial, Prapidez, Plegendario));
-			} else if (opcion == 2) {
+				Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
+		}else if (opcion == 2) {
 				cout<<"----------Entrenar---------";
 				cout<<"1. Modificar nombre"<<endl;
 				cout<<"2. Modificar Nivel"<<endl;
 				cout<<"3. Regresar"<<endl;
 				cin>>opcion;
-			} else if (opcion == 3)
-			{
+		} else if (opcion == 3)	{
 				/* code */
-			} else if (opcion == 4)
-			{
+		} else if (opcion == 4) {
 				/* code */
-			}
+		}
 		
-		} while(opcion != 5);
+	} while(opcion != 5);
 }
 
 string TiposPokemon(){
