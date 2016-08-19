@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 #include "Pokemon.h"
 using namespace std;
 
@@ -9,8 +10,16 @@ Pokemon::Pokemon(string nombre, int nivel, string naturaleza, string tipo1, stri
 	this -> nombre = nombre;
 	this -> nivel = nivel;
 	this -> naturaleza = naturaleza;
-	this -> tipo1;
-	this -> tipo2;
+	if (tipo2 == tipo1)
+	{
+		this -> tipo1 = tipo1;
+		this -> tipo2 = "";
+
+		cout << "tipos repetidos, solo tipo 1 se asigno.";
+	} else {
+		this -> tipo1 = tipo1;
+		this -> tipo2 = tipo2;
+	}
 	this -> hp = hp;
 	this -> ataque = ataque;
 	this -> defensa = defensa;
@@ -52,8 +61,22 @@ string Pokemon::getTipo1() {
 	return tipo1;
 }
 
+void Pokemon::setTipo1(string tipo1) {
+	if (this -> tipo2 == tipo1)
+	{
+		cout << "tipos repetidos, no hay cambio.";
+	} else {
+		this -> tipo1 = tipo1;
+	}
+}
+
 void Pokemon::setTipo2(string tipo2) {
-	this -> tipo2 = tipo2;
+	if (tipo2 == this -> tipo1)
+	{
+		cout << "tipos repetidos, no hay cambio.";
+	} else {
+		this -> tipo2 = tipo2;
+	}
 }
 
 int Pokemon::getHP() {
