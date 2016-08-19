@@ -70,6 +70,10 @@ void Pokemon::setTipo1(string tipo1) {
 	}
 }
 
+string Pokemon::getTipo2() {
+	return tipo2;
+}
+
 void Pokemon::setTipo2(string tipo2) {
 	if (tipo2 == this -> tipo1)
 	{
@@ -136,8 +140,8 @@ void Pokemon::setLegendario(bool legendario) {
 }
 
 void Pokemon::toString() {
-	cout << "Nombre: " << nombre << endl;
-	cout << "Nivel: " << nivel << endl;
+	cout << "Nombre: " << this -> nombre << endl;
+	cout << "Nivel: " << this -> nivel << endl;
 	cout << "Naturaleza: " << naturaleza << endl;
 	cout << "Tipo 1: " << tipo1 << endl;
 	cout << "Tipo 2 (si tiene): " << tipo2 << endl;

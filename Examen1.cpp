@@ -1,6 +1,7 @@
 #include "Pokemon.h"
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 #include <string>
 
@@ -102,10 +103,50 @@ int main(int argc, char const *argv[]) {
 		} else if (opcion == 4) {
 				/* code */
 		} else if (opcion == 5)	{
-			for (int i = 0; i < Lista.size(); ++i)
-			{
-				/* code */
+			string name1;
+			string name2;
+			int pick;
+			cout << "1. Ordenar por nombre \n 2. Ordenar por nivel \n";
+
+			if (pick == 1) {
+				//
+			} else if (pick == 2) {
+				int first;
+				int second;
+				Pokemon one;
+				Pokemon two;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if (i + 1 < Lista.size())
+					{
+						first = Lista.at(i) -> getNivel();
+						second = Lista.at(i + 1) -> getNivel();
+
+						if (first > second)
+						{
+							//Lista.at(i) = 
+						}
+					}
+				}
+			} else {
+				cout << "Opcion no valida. \n";
 			}
+
+			/*for (int i = 0; i < Lista.size(); ++i)
+			{
+				if (i + 1 < Lista.size())
+				{
+					name1 = Lista.at(i) -> getNombre();
+					name2 = Lista.at(i + 1) -> getNombre();
+
+					if (name1[0] > name2[0])
+					{
+						Lista.at(i) = name2;
+						Lista.at(i + 1) = name1;
+					}
+				}
+				
+			}*/
 		}
 		
 	} while(opcion != 6);
