@@ -87,7 +87,7 @@ int main(int argc, char const *argv[]) {
 				{
 					cout << "No se creo el nuevo Pokemon \n";
 				} else {
-					Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
+					//Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
 					cout << "Se creo un nuevo Pokemon \n";
 				}
 				
@@ -102,7 +102,10 @@ int main(int argc, char const *argv[]) {
 		} else if (opcion == 4) {
 				/* code */
 		} else if (opcion == 5)	{
-			/* code */
+			for (int i = 0; i < Lista.size(); ++i)
+			{
+				/* code */
+			}
 		}
 		
 	} while(opcion != 6);
