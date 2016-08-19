@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "Pokemon.h"
 using namespace std;
 #include <string>
 string TiposPokemon();
@@ -10,6 +11,10 @@ int main(int argc, char const *argv[])
 	int opcion;
 	string nombre;
 	std::vector<string> v;
+	vector<Pokemon*> Lista;
+	Pokemon poke; 
+	//Pokemon* Poke = new Pokemon();
+	//Lista.push_back(Poke*);
 	do{
 		cout<<"Bienvenido a Pokemon Go ¿Qué deseas hacer?"<<endl;
 		cout<<"1. Ingresar un nuevo Pokemon"<<endl;
