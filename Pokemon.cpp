@@ -103,6 +103,14 @@ void Pokemon::setDefensa(float defensa) {
 	this -> defensa = defensa;
 }
 
+float Pokemon::getAtaqueEspecial() {
+	return ataqueEspecial;
+}
+
+void Pokemon::setAtaqueEspecial(float ataqueEspecial) {
+	this -> ataqueEspecial = ataqueEspecial;
+}
+
 float Pokemon::getDefensaEspecial() {
 	return defensaEspecial;
 }
