@@ -23,7 +23,12 @@ int main(int argc, char const *argv[]) {
 	int opcion;
 
 	vector<Pokemon*> Lista;
-	
+	Lista.push_back(new Pokemon("Pikachu", 5, "brave", "tipo1", "Electrico", 2, 4, 5, 1, 2, 3, true));
+	Lista.push_back(new Pokemon("Bulbasaur", 3, "Bold", "veneno", "Plant", 2, 4, 5, 1, 2, 3, true));
+	Lista.push_back(new Pokemon("Horsea", 1, "whatever", "hml", "wekhjd", 5, 7,2, 3, 1, 3, false));
+	Lista.push_back(new Pokemon("Goldeen", 1, "kjgh", "hml", "wekhjd", 2, 4, 5, 1, 2, 3, false));
+	Lista.push_back(new Pokemon("Staryu", 1, "kjgh", "hml", "wekhjd", 2, 4, 5, 1, 2, 3, true));
+
 
 	do{
 		cout<<"Bienvenido a Pokemon Go ¿Qué deseas hacer?"<<endl;
@@ -81,7 +86,6 @@ int main(int argc, char const *argv[]) {
 				}
 
 				float check;
-
 				check = Php + Pataque + Pdefensa + PataqueEspecial + PdefensaEspecial + Prapidez;
 				if (check > 780)
 				{
@@ -91,22 +95,78 @@ int main(int argc, char const *argv[]) {
 					cout << "Se creo un nuevo Pokemon \n";
 				}
 				
-		}else if (opcion == 2) {
-				cout<<"----------Entrenar---------";
-				cout<<"1. Modificar nombre"<<endl;
-				cout<<"2. Modificar Nivel"<<endl;
-				cout<<"3. Regresar"<<endl;
-				cin>>opcion;
-		} else if (opcion == 3)	{
+		}
+		else if (opcion == 2) {
+			int opcion2;
+			string nombreNuevo;
+			int nivelNuevo;
+			cout<<"----------Entrenar---------"<<endl;
+			cout<<"¿Qué Pokemon quieres entrenar?"<<endl;
+			for(int i = 0; i < Lista.size(); i++){
+				cout<<i+1<<". "<<Lista.at(i)->getNombre()<<endl;
+			}
+			cin>>opcion2;
+			do{
+				for(int i = 0; i < Lista.size(); i++){
+					if(opcion2-1 == i){
+						cout<<"----------Entrenar a "<<Lista.at(i)->getNombre()<<" con nivel "<<Lista.at(i)->getNivel()<<"---------"<<endl;
+						cout<<"1. Modificar nombre"<<endl;
+						cout<<"2. Modificar Nivel"<<endl;
+						cout<<"3. Salir"<<endl;
+						cin>>opcion2;
+						if (opcion2 == 1)
+						{
+							cout<<"Ingresa el nuevo nombre: ";
+							cin>>nombreNuevo;
+							Lista.at(i)->setNombre(nombreNuevo);
+							cout<<"Nombre modificado correctamente"<<endl;
+						}
+						if (opcion2 == 2)
+						{
+							cout<<"Ingresa el nuevo nivel: ";
+							cin>>nivelNuevo;
+							Lista.at(i)->setNivel(nivelNuevo);
+							cout<<"Nivel modificado correctamente"<<endl;
+						}
+					}
+
+				}
+
+			}while(opcion2 != 3);
+		}
+
+		else if (opcion == 3){
+			int opcion2;
+			string nombreNuevo;
+			int nivelNuevo;
+			cout<<"----------Eliminar---------"<<endl;
+			cout<<"¿Qué Pokemon quieres liberar?"<<endl;
+			for(int i = 0; i < Lista.size(); i++){
+				cout<<i+1<<". "<<Lista.at(i)->getNombre()<<endl;
+			}
+			cin>>opcion2;
+			for(int i = 0; i < Lista.size(); i++){
+				if(opcion2-1 == i){
+					Lista.erase(Lista.begin()+i);
+					cout<<Lista.at(i)->getNombre()<<" liberado correcatmente";
+				}
+			}
+			cout<<"Lista de tus Pokemon atcualizada";
+			for(int i = 0; i < Lista.size(); i++){
+				cout<<i+1<<". "<<Lista.at(i)->getNombre()<<endl;
+			}
+				
+		} 
+		else if (opcion == 4) {
 				/* code */
-		} else if (opcion == 4) {
-				/* code */
-		} else if (opcion == 5)	{
+		} 
+		else if (opcion == 5)	{
 			for (int i = 0; i < Lista.size(); ++i)
 			{
 				/* code */
 			}
 		}
+		
 		
 	} while(opcion != 6);
 }
