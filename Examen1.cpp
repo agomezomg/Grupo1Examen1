@@ -92,7 +92,7 @@ int main(int argc, char const *argv[]) {
 				{
 					cout << "No se creo el nuevo Pokemon \n";
 				} else {
-					//Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
+					Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
 					cout << "Se creo un nuevo Pokemon \n";
 				}
 				
@@ -164,13 +164,18 @@ int main(int argc, char const *argv[]) {
 		} 
 		else if (opcion == 4) {
 				/* code */
+<<<<<<< HEAD
 
 		} 
 		else if (opcion == 5)	{
+=======
+		} else if (opcion == 5)	{
+>>>>>>> a31d8e16a724f98b3c176bbf94153606c9735e07
 			string name1;
 			string name2;
 			int pick;
 			cout << "1. Ordenar por nombre \n 2. Ordenar por nivel \n";
+			cin >> pick;
 
 			if (pick == 1) {
 				string first;
@@ -183,7 +188,7 @@ int main(int argc, char const *argv[]) {
 					if (i + 1 < Lista.size())
 					{
 						one = Lista.at(i);
-						two = Lista.at(i + 2);
+						two = Lista.at(i + 1);
 						first = one -> getNombre();
 						second = two -> getNombre();
 
@@ -204,7 +209,7 @@ int main(int argc, char const *argv[]) {
 					if (i + 1 < Lista.size())
 					{
 						one = Lista.at(i);
-						two = Lista.at(i + 2);
+						two = Lista.at(i + 1);
 						first = one -> getNivel();
 						second = two -> getNivel();
 
@@ -215,28 +220,21 @@ int main(int argc, char const *argv[]) {
 						}
 					}
 				}
+<<<<<<< HEAD
 			} else {
 				cout << "Opcion no valida. \n";
 			}
+=======
+>>>>>>> a31d8e16a724f98b3c176bbf94153606c9735e07
 
-			/*for (int i = 0; i < Lista.size(); ++i)
-			{
-				if (i + 1 < Lista.size())
+				for (int i = 0; i < Lista.size(); ++i)
 				{
-					name1 = Lista.at(i) -> getNombre();
-					name2 = Lista.at(i + 1) -> getNombre();
-
-					if (name1[0] > name2[0])
-					{
-						Lista.at(i) = name2;
-						Lista.at(i + 1) = name1;
-					}
+					cout << (Lista.at(i) -> getNombre()) << ", lvl: " << (Lista.at(i) -> getNivel()) << endl;
 				}
-				
-			}*/
+			} else {
+				cout << "Opcion no valida. \n";
+			}
 		}
-		
-		
 	} while(opcion != 6);
 }
 
