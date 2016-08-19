@@ -134,3 +134,23 @@ bool Pokemon::getLegendario() {
 void Pokemon::setLegendario(bool legendario) {
 	this -> legendario = legendario;
 }
+
+void Pokemon::toString() {
+	cout << "Nombre: " << nombre << endl;
+	cout << "Nivel: " << nivel << endl;
+	cout << "Naturaleza: " << naturaleza << endl;
+	cout << "Tipo 1: " << tipo1 << endl;
+	cout << "Tipo 2 (si tiene): " << tipo2 << endl;
+	cout << "HP: " << hp << endl;
+	cout << "Ataque: " << ataque << endl;
+	cout << "Defensa: " << defensa << endl;
+	cout << "Ataque Especial: " << ataqueEspecial << endl;
+	cout << "Defensa Especial: " << defensaEspecial << endl;
+	cout << "Rapidez: " << rapidez << endl;
+	if (legendario == true)
+	{
+		cout << "legendario: SI \n";
+	} else {
+		cout << "legendario: NO \n";
+	}
+}

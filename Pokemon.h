@@ -45,4 +45,5 @@ class Pokemon {
 		void setRapidez(float);
 		bool getLegendario();
 		void setLegendario(bool);
+		void toString();
 };
