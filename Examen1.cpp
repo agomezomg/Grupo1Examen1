@@ -1,6 +1,7 @@
 #include "Pokemon.h"
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 #include <string>
 
@@ -159,12 +160,82 @@ int main(int argc, char const *argv[]) {
 		} 
 		else if (opcion == 4) {
 				/* code */
+<<<<<<< HEAD
 		} 
 		else if (opcion == 5)	{
 			for (int i = 0; i < Lista.size(); ++i)
 			{
 				/* code */
+=======
+		} else if (opcion == 5)	{
+			string name1;
+			string name2;
+			int pick;
+			cout << "1. Ordenar por nombre \n 2. Ordenar por nivel \n";
+
+			if (pick == 1) {
+				string first;
+				string second;
+				Pokemon* one = new Pokemon();
+				Pokemon* two = new Pokemon();
+
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if (i + 1 < Lista.size())
+					{
+						one = Lista.at(i);
+						two = Lista.at(i + 2);
+						first = one -> getNombre();
+						second = two -> getNombre();
+
+						if (first[0] > second[0])
+						{
+							Lista.at(i) = two;
+							Lista.at(i + 1) = one;
+						}
+					}
+				}
+			} else if (pick == 2) {
+				int first;
+				int second;
+				Pokemon* one = new Pokemon();
+				Pokemon* two = new Pokemon();
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if (i + 1 < Lista.size())
+					{
+						one = Lista.at(i);
+						two = Lista.at(i + 2);
+						first = one -> getNivel();
+						second = two -> getNivel();
+
+						if (first > second)
+						{
+							Lista.at(i) = two;
+							Lista.at(i + 1) = one;
+						}
+					}
+				}
+			} else {
+				cout << "Opcion no valida. \n";
+>>>>>>> 415dceb8085f4b1ad62dbc049a023a5ea9ad68d4
 			}
+
+			/*for (int i = 0; i < Lista.size(); ++i)
+			{
+				if (i + 1 < Lista.size())
+				{
+					name1 = Lista.at(i) -> getNombre();
+					name2 = Lista.at(i + 1) -> getNombre();
+
+					if (name1[0] > name2[0])
+					{
+						Lista.at(i) = name2;
+						Lista.at(i + 1) = name1;
+					}
+				}
+				
+			}*/
 		}
 		
 		
