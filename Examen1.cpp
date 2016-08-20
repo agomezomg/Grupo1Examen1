@@ -173,21 +173,22 @@ int main(int argc, char const *argv[]) {
 				Pokemon* one = new Pokemon();
 				Pokemon* two = new Pokemon();
 
-				for (int i = 0; i < Lista.size(); ++i)
-				{
-					if (i + 1 < Lista.size())
-					{
+				for (int i = 0; i < Lista.size(); ++i) {
+					for (int j = i + 1; j < Lista.size(); ++j) {
 						one = Lista.at(i);
-						two = Lista.at(i + 1);
+						two = Lista.at(j);
 						first = one -> getNombre();
 						second = two -> getNombre();
-
-						if (first[0] > second[0])
-						{
+						if (first[0] > second[0]) {
 							Lista.at(i) = two;
-							Lista.at(i + 1) = one;
+							Lista.at(j) = one;
 						}
 					}
+				}
+
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					cout << Lista.at(i) -> getNombre() << endl;
 				}
 			} else if (pick == 2) {
 				int first;
@@ -196,18 +197,16 @@ int main(int argc, char const *argv[]) {
 				Pokemon* two = new Pokemon();
 				for (int i = 0; i < Lista.size(); ++i)
 				{
-					if (i + 1 < Lista.size())
+					for (int j = i + 1; j < Lista.size(); ++j)
 					{
 						one = Lista.at(i);
-						two = Lista.at(i + 1);
+						two = Lista.at(j);
 						first = one -> getNivel();
 						second = two -> getNivel();
-
-						if (first > second)
-						{
+						if (first > second) {
 							Lista.at(i) = two;
-							Lista.at(i + 1) = one;
-						}
+							Lista.at(j) = one;
+						}	
 					}
 				}
 
@@ -215,11 +214,14 @@ int main(int argc, char const *argv[]) {
 				{
 					cout << (Lista.at(i) -> getNombre()) << ", lvl: " << (Lista.at(i) -> getNivel()) << endl;
 				}
+
+
 			} else {
 				cout << "Opcion no valida. \n";
 			}
 		}
 	} while(opcion != 6);
+
 }
 
 string TiposPokemon(){
