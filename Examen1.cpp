@@ -166,12 +166,6 @@ int main(int argc, char const *argv[]) {
 
 		} 
 		else if (opcion == 5)	{
-<<<<<<< HEAD
-
-		} else if (opcion == 5)	{
-
-=======
->>>>>>> 0bfe1b28f0b1e0424bd58dbc961a9ecb4e114087
 			string name1;
 			string name2;
 			int pick;
@@ -220,7 +214,6 @@ int main(int argc, char const *argv[]) {
 						}	
 					}
 				}
-<<<<<<< HEAD
 
 			} else {
 				cout << "Opcion no valida. \n";
@@ -231,22 +224,18 @@ int main(int argc, char const *argv[]) {
 				{
 					cout << (Lista.at(i) -> getNombre()) << ", lvl: " << (Lista.at(i) -> getNivel()) << endl;
 				}
-=======
->>>>>>> 0bfe1b28f0b1e0424bd58dbc961a9ecb4e114087
 			} else {
 				cout << "Opcion no valida. \n";
 			}
 		
 	} while(opcion != 6);
-<<<<<<< HEAD
+
+
 	for (int i = 0; i< Lista.size();i++)
    	{
     	delete (Lista[i]);
   	} 
    Lista.clear();
-=======
-
->>>>>>> 0bfe1b28f0b1e0424bd58dbc961a9ecb4e114087
 }
 
 string TiposPokemon(){
