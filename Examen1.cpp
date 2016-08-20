@@ -147,12 +147,16 @@ int main(int argc, char const *argv[]) {
 			}
 			cin>>opcion2;
 			for(int i = 0; i < Lista.size(); i++){
-				if(opcion2-1 == i){
+				if(opcion2-1 == i && !Lista.at(i)->getLegendario()){
 					Lista.erase(Lista.begin()+i);
-					cout<<Lista.at(i)->getNombre()<<" liberado correcatmente";
+					cout<<Lista.at(i)->getNombre()<<" liberado correcatmente"<<endl;
+				}
+				else if (opcion2-1 == i && Lista.at(i)->getLegendario())
+				{
+					cout<<"El Pokemon no se puede eliminar porque es legendario"<<endl;
 				}
 			}
-			cout<<"Lista de tus Pokemon atcualizada";
+			cout<<"Lista de tus Pokemon atcualizada"<<endl;
 			for(int i = 0; i < Lista.size(); i++){
 				cout<<i+1<<". "<<Lista.at(i)->getNombre()<<endl;
 			}
@@ -160,7 +164,9 @@ int main(int argc, char const *argv[]) {
 		} 
 		else if (opcion == 4) {
 				/* code */
-		} else if (opcion == 5)	{
+
+		} 
+		else if (opcion == 5)	{
 			string name1;
 			string name2;
 			int pick;
@@ -209,13 +215,6 @@ int main(int argc, char const *argv[]) {
 						}	
 					}
 				}
-
-				for (int i = 0; i < Lista.size(); ++i)
-				{
-					cout << (Lista.at(i) -> getNombre()) << ", lvl: " << (Lista.at(i) -> getNivel()) << endl;
-				}
-
-
 			} else {
 				cout << "Opcion no valida. \n";
 			}
