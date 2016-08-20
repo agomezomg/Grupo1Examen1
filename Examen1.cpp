@@ -94,244 +94,7 @@ int main(int argc, char const *argv[]) {
 					Lista.push_back(new Pokemon(Pnombre, Pnivel, Pnaturaleza, Ptipo1, Ptipo2, Php, Pataque, Pdefensa, PataqueEspecial, PdefensaEspecial, Prapidez, Plegendario));
 					cout << "Se creo un nuevo Pokemon \n";
 				}
-				
-<<<<<<< HEAD
-		}else if (opcion == 2) {
-				cout<<"----------Entrenar---------";
-				cout<<"1. Modificar nombre"<<endl;
-				cout<<"2. Modificar Nivel"<<endl;
-				cout<<"3. Regresar"<<endl;
-				cin>>opcion;
-		} else if (opcion == 3)	{
-				/* code */
-		} else if (opcion == 4) {
-				/*
-					if (OpcionBusqueda==2){
-						cout<<"Ingrese el numero mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el numero menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getDefensa()>=Menor&&Lista.at(i)->getDefensa()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-					if (OpcionBusqueda==3){
-						cout<<"Ingrese el numero mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el numero menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getRapidez()>=Menor&&Lista.at(i)->getRapidez()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-					if (OpcionBusqueda==4){
-						cout<<"Ingrese el numero mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el numero menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getHP()>=Menor&&Lista.at(i)->getHP()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-					if (OpcionBusqueda==5){
-						cout<<"Ingrese el numero mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el numero menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getAtaque()>=Menor&&Lista.at(i)->getAtaque()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-					if (OpcionBusqueda==6){
-						cout<<"Ingrese el numero mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el numero menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getDefensaEspecial()>=Menor&&Lista.at(i)->getDefensaEspecial()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-				}	
-				
-				}else if(OpcionBusqueda==2){
-						string TipoBusqueda1=TiposPokemon();
-						string TipoBusqueda2=TiposPokemon();
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if ((Lista.at(i)->getTipo1()==TipoBusqueda1&&Lista.at(i)->getTipo1()==TipoBusqueda2)||(Lista.at(i)->getTipo1()==TipoBusqueda2&&Lista.at(i)->getTipo1()==TipoBusqueda1))
-							{
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}
-						}
-				}else if (OpcionBusqueda==3)
-				{
-					string BusqeudaNombre="";
-					for (int i = 0; i < Lista.size(); ++i)
-						{
-							if (Lista.at(i)->getNombre()==BusqeudaNombre)
-							{
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}
-						}	
-				}else if (OpcionBusqueda==4)
-				{
-					string BusquedaNaturaleza=ElegirNaturaleza();
-					for(int i = 0; i < Lista.size(); ++i)
-						{
-							if ((Lista.at(i)->getNaturaleza()==BusquedaNaturaleza))
-							{
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}
-						}
-				}else if (OpcionBusqueda==5)
-				{
-						cout<<"Ingrese el nivel mayor a buscar:";
-						int Mayor=0;
-						cin>>Mayor;
-						cout<<"Ingrese el nivel menor a buscar:";
-						int Menor=0;
-						cin>>Menor;
-						for (int i = 0; i < Lista.size(); ++i)
-						{
-							if(Lista.at(i)->getNivel()>=Menor&&Lista.at(i)->getNivel()<Mayor){
-								cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
-								cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
-								cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
-								cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
-								cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
-								cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
-								cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
-								//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
-								cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
-								cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
-								cout<<"\n";	
-							}	
-						}
-					}
-				
-
-				*/
-		} else if (opcion == 5)	{
-			for (int i = 0; i < Lista.size(); ++i)
-			{
-				/* code */
-=======
-		}
-		else if (opcion == 2) {
+		} else if (opcion == 2) {
 			int opcion2;
 			string nombreNuevo;
 			int nivelNuevo;
@@ -339,7 +102,6 @@ int main(int argc, char const *argv[]) {
 			cout<<"¿Qué Pokemon quieres entrenar?"<<endl;
 			for(int i = 0; i < Lista.size(); i++){
 				cout<<i+1<<". "<<Lista.at(i)->getNombre()<<endl;
->>>>>>> 50a560cb373d6f3d79c2ab77a107e5443b43285f
 			}
 			cin>>opcion2;
 			do{
@@ -369,9 +131,7 @@ int main(int argc, char const *argv[]) {
 				}
 
 			}while(opcion2 != 3);
-		}
-
-		else if (opcion == 3){
+		} else if (opcion == 3){
 			int opcion2;
 			string nombreNuevo;
 			int nivelNuevo;
@@ -398,7 +158,230 @@ int main(int argc, char const *argv[]) {
 				
 		} 
 		else if (opcion == 4) {
-				/* code */
+			/*int OpcionBusqueda;
+			cout << "2. Defensa \n";
+			cout << "3. Ataque Especial \n";
+			cout << "4. Defensa Especial \n";
+			cout << "4. HP \n";
+
+			if (OpcionBusqueda==2){
+				cout<<"Ingrese el numero mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el numero menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getDefensa()>=Menor&&Lista.at(i)->getDefensa()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+			if (OpcionBusqueda==3){
+				cout<<"Ingrese el numero mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el numero menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getRapidez()>=Menor&&Lista.at(i)->getRapidez()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+			if (OpcionBusqueda==4){
+				cout<<"Ingrese el numero mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el numero menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getHP()>=Menor&&Lista.at(i)->getHP()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+			if (OpcionBusqueda==5){
+				cout<<"Ingrese el numero mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el numero menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getAtaque()>=Menor&&Lista.at(i)->getAtaque()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+			if (OpcionBusqueda==6){
+				cout<<"Ingrese el numero mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el numero menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getDefensaEspecial()>=Menor&&Lista.at(i)->getDefensaEspecial()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+		}	
+		
+		}else if(OpcionBusqueda==2){
+				string TipoBusqueda1=TiposPokemon();
+				string TipoBusqueda2=TiposPokemon();
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if ((Lista.at(i)->getTipo1()==TipoBusqueda1&&Lista.at(i)->getTipo1()==TipoBusqueda2)||(Lista.at(i)->getTipo1()==TipoBusqueda2&&Lista.at(i)->getTipo1()==TipoBusqueda1))
+					{
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}
+				}
+		}else if (OpcionBusqueda==3)
+		{
+			string BusqeudaNombre="";
+			for (int i = 0; i < Lista.size(); ++i)
+				{
+					if (Lista.at(i)->getNombre()==BusqeudaNombre)
+					{
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}
+				}	
+		}else if (OpcionBusqueda==4)
+		{
+			string BusquedaNaturaleza=ElegirNaturaleza();
+			for(int i = 0; i < Lista.size(); ++i)
+				{
+					if ((Lista.at(i)->getNaturaleza()==BusquedaNaturaleza))
+					{
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}
+				}
+		}else if (OpcionBusqueda==5)
+		{
+				cout<<"Ingrese el nivel mayor a buscar:";
+				int Mayor=0;
+				cin>>Mayor;
+				cout<<"Ingrese el nivel menor a buscar:";
+				int Menor=0;
+				cin>>Menor;
+				for (int i = 0; i < Lista.size(); ++i)
+				{
+					if(Lista.at(i)->getNivel()>=Menor&&Lista.at(i)->getNivel()<Mayor){
+						cout<<"Nombre:"<<Lista.at(i)->getNombre()<"\n";
+						cout<<"Nivel:"<<Lista.at(i)->getNivel()<"\n";
+						cout<<"Naturaleza:"<<Lista.at(i)->getNaturaleza()<"\n";
+						cout<<"Tipo1:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"Tipo2:"<<Lista.at(i)->getTipo1()<"\n";
+						cout<<"HP:"<<Lista.at(i)->getHP()<"\n";
+						cout<<"Ataque:"<<Lista.at(i)->getAtaque()<"\n";
+						cout<<"Defensa:"<<Lista.at(i)->getDefensa()<"\n";
+						//cout<<"AtaqueEspecial:"<<Lista.at(i)->getAtaqueEspecial()<"\n";
+						cout<<"DefensaEspecial"<<Lista.at(i)->getDefensaEspecial()<"\n";
+						cout<<"Rapidez:"<<Lista.at(i)->getRapidez()<"\n";
+						cout<<"\n";	
+					}	
+				}
+			}
+				
+*/
 
 		} 
 		else if (opcion == 5)	{
